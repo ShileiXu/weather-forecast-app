@@ -1,25 +1,21 @@
 import logo from './logo.svg';
+import React from 'react';
+import SearchBar from './components/SearchBar';
+import CurrentWeather from './components/CurrentWeather';
+import Forecast from './components/Forecast';
+import HomeCity from './components/HomeCity';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Current Weather</h1>
+      <HomeCity></HomeCity><SearchBar></SearchBar>
+      
+      <CurrentWeather />
+      <Forecast/>
     </div>
   );
-}
+};
 
 export default App;
